@@ -417,3 +417,150 @@ footer ul li a{
         gap: 1rem;
     }
 }
+
+
+/* --- LE CONTENEUR DU FORMULAIRE --- */
+.contact-form {
+    width: 100%;
+    max-width: 800px; /* Grand et spacieux sur desktop, s'adapte sur mobile */
+    margin: 0 auto; /* Centre automatiquement le formulaire dans ta section */
+    background-color: #fcfcfc; /* Fond très légèrement grisé pour donner du relief */
+    border: 1px solid #000000; /* Ligne noire fine assortie à tes cartes */
+    border-radius: 32px; /* Grand arrondi élégant */
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px; /* Espace régulier entre chaque élément */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+    box-sizing: border-box;
+}
+
+/* --- STRUCTURE DES CHAMPS DE SAISIE --- */
+.input-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* Alignement de l'icône enveloppe à gauche */
+.input-icon {
+    position: absolute;
+    left: 20px; /* Légèrement recentré pour aller avec le petit input */
+    width: 18px; /* Taille réduite pour s'harmoniser avec le petit input */
+    height: 18px;
+    color: #000000;
+    pointer-events: none;
+}
+
+/* Style de base de tous les champs */
+.form-input {
+    width: 100%;
+    padding: 18px 24px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #000000;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 24px;
+    outline: none;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+/* ==========================================================================
+   MODIFICATIONS DEMANDÉES : EXCLUSIVEMENT POUR LES INPUTS (EMAIL & OBJET)
+   ========================================================================== */
+
+/* Réduction de la taille et de l'écriture des inputs uniquement */
+.contact-form input.form-input {
+    padding: 10px 20px; /* Padding vertical réduit pour diminuer la hauteur */
+    font-size: 13px;    /* Écriture plus petite */
+}
+
+/* Ajustement de la taille du texte du placeholder pour les inputs */
+.contact-form input.form-input::placeholder {
+    font-size: 13px;
+    color: #757575; /* Une couleur grise propre et présentable */
+}
+
+/* Décale le texte de l'input email uniquement pour ne pas chevaucher l'icône */
+.input-wrapper:first-child .form-input {
+    padding-left: 50px; /* Ajusté par rapport à la taille réduite de l'input et de l'icône */
+}
+
+/* ==========================================================================
+   FIN DES MODIFICATIONS (LE RESTE DEMEURE INCHANGÉ)
+   ========================================================================== */
+
+/* Zone de texte pour le message */
+.form-textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Effet visuel discret au focus */
+.form-input:focus {
+    background-color: #fafafa;
+    border-width: 1.5px;
+}
+
+/* --- BOUTON ENVOYER (NOIR & BLANC) --- */
+.submit-button {
+    width: 100%;
+    padding: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500; /* Version Medium de Poppins */
+    color: #ffffff;
+    background-color: #000000; /* Fond noir pur */
+    border: 1px solid #000000;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Changement subtil au survol */
+.submit-button:hover {
+    background-color: #222222;
+    transform: translateY(-1px);
+}
+
+/* --- RESPONSIVE (POUR LES SMARTPHONES) --- */
+@media (max-width: 600px) {
+    .contact-form {
+        padding: 24px;
+        border-radius: 24px;
+        gap: 16px;
+    }
+    
+    .form-input {
+        padding: 14px 20px;
+        font-size: 14px;
+    }
+    
+    /* Force les inputs à rester fins même sur mobile */
+    .contact-form input.form-input {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+    .contact-form input.form-input::placeholder {
+        font-size: 12px;
+    }
+    
+    .input-wrapper:first-child .form-input {
+        padding-left: 44px;
+    }
+    
+    .input-icon {
+        left: 16px;
+        width: 16px;
+        height: 16px;
+    }
+    
+    .submit-button {
+        padding: 14px;
+        font-size: 14px;
+        border-radius: 20px;
+    }
+}

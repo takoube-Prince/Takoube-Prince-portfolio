@@ -120,7 +120,7 @@
                 <h3>GazNow</h3>
                 <p>Une plateforme permettant aux utilisateurs de géolocaliser du gaz domestique.</p>
                 <div class="btn-group">
-                    <div class="btn">Demo</div>
+                    <a href="#" target="_blank" style="color: black; text-decoration: none;"><div class="btn">Demo</div></a>
                     <a href="https://github.com/takoube-Prince/Code-Ninjas.git" target="_blank" style="color: black; text-decoration: none;"><div class="btn">Repo Github</div></a>
                 </div>
             </div>
@@ -130,7 +130,7 @@
                 <h3>eSHOP</h3>
                 <p>Une plateforme de commerce électronique qui permet aux utilisateurs d'acheter des produits en ligne.</p>
                 <div class="btn-group">
-                    <div class="btn">Demo</div>
+                    <a href="#" target="_blank" style="color: black; text-decoration: none;"><div class="btn">Demo</div></a>
                     <a href="https://github.com/takoube-Prince/eSHOP.git" target="_blank" style="color: black; text-decoration: none;"><div class="btn">Repo Github</div></a>
                 </div>
             </div>
@@ -141,12 +141,25 @@
         <div class="input-box">
             <h2 class="section-title">Contatez-moi</h2>
 
-            <div class="input">
-                <input type="text" placeholder="exemple@gmail.com">
-                <i class="fa-solid fa-envelope"></i>
-            </div>
+            <form action="https://formspree.io/f/xpqnrkpe" method="POST" class="contact-form">
+    
+                <div class="input-wrapper">
+                    <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.92V6.75" />
+                    </svg>
+                    <input type="email" name="email" placeholder="exemple@gmail.com" required class="form-input">
+                </div>
 
-            <div class="btn">Submit</div>
+                <div class="input-wrapper">
+                    <input type="text" name="subject" placeholder="Votre objet" required class="form-input">
+                </div>
+
+                <div class="input-wrapper">
+                    <textarea name="message" placeholder="Écrivez votre message ici..." rows="6" required class="form-input form-textarea"></textarea>
+                </div>
+
+                <button type="submit" class="submit-button">Envoyer</button>
+            </form>
         </div>
     </section>
 
